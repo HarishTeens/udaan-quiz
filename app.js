@@ -18,7 +18,6 @@ express.post("/",(req,res)=>{
 })
 
 isName=(req,res,next)=>{
-    res.statusCode=200;
     if(player){
         next();
     }
@@ -30,7 +29,7 @@ express.get("/courses",isName,(req,res)=>{
     Object.keys(questions).forEach(question=>{
         courses.push(question);
     })
-    res.render("courses",{courses:courses});
+    res.render("courses",{player:player,courses:courses});
 })
 
 
@@ -68,7 +67,11 @@ express.post("/course/:name",(req,res)=>{
 })
 
 express.get("/score/:name",isName,(req,res)=>{
-    res.send(scores[req.params.name]);
+    const playerName=player;
+    if(playerName in scores)
+        res.render("score",{score:scores[playerName]});
+    else
+        res.send("Nothing Here :(");
 })
 
 

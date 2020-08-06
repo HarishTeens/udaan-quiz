@@ -6,14 +6,16 @@
     <title>Quiz</title>
 </head>
 <body>
-
-    <ul>
+    <h1>Courses Available</h1>
+    <ul style="list-style-type: none;">
 
         <%
         courses.forEach((course)=>{ %>
             <li><a href="/course/<%=course%>"><%=course%></a></li>
         <% }) %>
     </ul>
+
+    <h3><a href="/score/<%=player%>">Check Your Score !</a></h3>
     
 </body>
 </html>

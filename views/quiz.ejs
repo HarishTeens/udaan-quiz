@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <ul>
+    <ul style="list-style-type: none;">
         <form action="/course/<%=courseName%>" method="POST">
         <%quiz.forEach((each,index)=>{ %>
             <li>
@@ -19,6 +19,7 @@
                 
             </li>
         <% }) %>
+        <br>
         <button>Submit</button>
         </form>
     </ul>
