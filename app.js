@@ -20,8 +20,10 @@ express.post("/",(req,res)=>{
 isName=(req,res,next)=>{
     if(player){
         next();
+    }else{
+        res.redirect("/");
     }
-    res.redirect("/");
+    
 }
 
 express.get("/courses",isName,(req,res)=>{
@@ -77,5 +79,5 @@ express.get("/score/:name",isName,(req,res)=>{
 
 
 express.listen(3000,()=>{
-    console.log('Server started!');
+    console.log('Server started at http://localhost:3000');
 })
