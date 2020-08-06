@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+
+    <ul>
+        <form action="/course/<%=courseName%>" method="POST">
+        <%quiz.forEach((each,index)=>{ %>
+            <li>
+                <h2><%=each.question%></h2>
+                <%each.options.forEach((option)=>{ %>                    
+                    <label for="<%=option%>>"> <%=option%> </label>
+                    <input type="radio" name="q<%=index%>" value="<%=option%>">
+                <%})%>
+                
+            </li>
+        <% }) %>
+        <button>Submit</button>
+        </form>
+    </ul>
+
+        
+</body>
+</html>

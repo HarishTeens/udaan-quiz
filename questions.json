@@ -1,0 +1,23 @@
+{
+    "animals":[
+        {
+            "question":"Which is faster?",
+            "options"  :["cheetah","horse","dog"],
+            "answer":"cheetah"
+        },
+        {
+            "question":"Which is bigger",
+            "options"  :["dog","elephant","rat"],
+            "answer":"elephant"
+        }],
+    "country":[{
+        "question":"Capital of India?",
+        "options"  :["chennai","goa","delhi"],
+        "answer":"delhi"
+    },
+    {
+        "question":"Capital of France",
+        "options"  :["new york","paris","delhi"],
+        "answer":"paris"
+    }]
+}
